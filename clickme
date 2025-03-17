@@ -1,34 +1,28 @@
-import java.awt.*;  
+import java.awt.*; 
 import java.awt.event.*;  
-
-public class ButtonClick {  
-    public static void main(String[] args) {  
-        Frame frame = new Frame("Button Click Example");  
-        
-        Label label = new Label("");  
-        label.setBounds(100, 100, 120, 30);  
-        
-        Button button = new Button("Click Me");  
-        button.setBounds(100, 150, 80, 30);  
-        
-        button.addActionListener(new ActionListener() {  
-            public void actionPerformed(ActionEvent e) {  
-                label.setText("Button Clicked!");
-                frame.repaint(); // Ensure UI updates properly
+public class ButtonClick  
+{  
+    public static void main (String [] args)  
+    {  
+        Frame frame=new Frame ("Button click Example");  
+          
+        Button button =new Button ("Click Me");  
+        Label label = new Label();  
+        button.setBounds (100,100,80,30);  
+        label.setBounds (100,150,200,30);  
+        button.addActionListener (new ActionListener ()  
+        {  
+            public void actionPerformed (ActionEvent e)  
+            {  
+                label.setText ("Button clicked !");  
             }  
         });  
-        
-        frame.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                frame.dispose();
-            }
-        });
-        
-        frame.add(button);  
-        frame.add(label);  
-        
-        frame.setSize(300, 300);  
-        frame.setLayout(null);  
-        frame.setVisible(true);  
+          
+        frame.add (button);  
+        frame.add (label);  
+        frame.setSize (300,300);  
+        frame.setLayout (null);  
+        frame.setVisible (true);  
     }  
-}
+}  
+
