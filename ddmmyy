@@ -1,0 +1,30 @@
+public class MyDate {
+    private int dd, mm, yy;
+
+    public MyDate() {
+        this.dd = 1;
+        this.mm = 1;
+        this.yy = 2000;
+    }
+
+    public MyDate(int dd, int mm, int yy) {
+        this.dd = dd;
+        this.mm = mm;
+        this.yy = yy;
+    }
+
+    public void displayDate() {
+        System.out.println(dd + "-" + mm + "-" + yy);
+    }
+
+    public static void main(String[] args) {
+        MyDate defaultDate = new MyDate();
+        MyDate customDate = new MyDate(17, 3, 2025);
+        
+        System.out.print("Default Date: ");
+        defaultDate.displayDate();
+        
+        System.out.print("Custom Date: ");
+        customDate.displayDate();
+    }
+}
